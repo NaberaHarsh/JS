@@ -1,3 +1,4 @@
+/*
 console.log("hello world");
 
 var score = 100;          //Number
@@ -18,6 +19,9 @@ console.log(score,average,name);
 var a=5;
 var b="hello";
 console.log(a+b);
+
+*/
+
 
 // lab set 1
 
@@ -159,6 +163,18 @@ function isogram(arr)
           return count==0?true:false;
       }
 
+      function acronym(arr)
+      {
+          var x= arr.split(" ");
+          var z=[];
+          for(i=0; i<x.length; i++)
+          {
+              var y= x[i].substr(0,1);
+                            z[i]=y; 
+          }
+          return z.join("").toUpperCase() ;
+      }
+
 /*
 var cities = [];
 var metro=["delhi","jaipur","mumbai"];
@@ -246,3 +262,157 @@ function add(arr)
       }
         return "sum is "+ sum;
     }
+
+    //object
+/*
+    person={}
+    person.name="harsh";
+    person.age=21
+    person.gender="male"
+     console.log(person);
+delete person.age;
+*/
+
+var records = [
+
+    {
+      "balance": "$1,025.60",
+      "picture": "http://placehold.it/32x32",
+      "age": 37,
+      "eyeColor": "blue",
+      "name": {
+        "first": "Weeks",
+        "last": "Steele"
+      },
+      "company": "KROG",
+      "email": "weeks.steele@krog.net",
+      "phone": "+1 (891) 411-2923",
+      "address": "549 Strong Place, Muir, North Dakota, 5806"
+    },
+    {
+      "balance": "$1,998.21",
+      "picture": "http://placehold.it/32x32",
+      "age": 26,
+      "eyeColor": "blue",
+      "name": {
+        "first": "Ware",
+        "last": "Sharp"
+      },
+      "company": "ZYTREK",
+      "email": "ware.sharp@zytrek.co.uk",
+      "phone": "+1 (809) 591-3842",
+      "address": "386 Madison Street, Chical, North Carolina, 4447"
+    },
+    {
+      "balance": "$2,313.87",
+      "picture": "http://placehold.it/32x32",
+      "age": 21,
+      "eyeColor": "brown",
+      "name": {
+        "first": "Munoz",
+        "last": "Hopper"
+      },
+      "company": "ECRATER",
+      "email": "munoz.hopper@ecrater.ca",
+      "phone": "+1 (800) 543-2646",
+      "address": "958 Kathleen Court, Soudan, Palau, 5436"
+    }]
+
+    //by reference
+/*
+    var cities=["jaipur","delhi","mumbai"]
+    var village=cities;
+    */
+
+   /* person.speak= function()                                   // methods in object
+    {
+        console.log("hi");
+    }
+
+*/
+    // lab set 5
+
+
+    var cart=[];
+    function addItem(itemName)
+    {
+        cart.push(itemName);
+    }
+
+    function removeItem(itemName)
+    {
+        var index= cart.indexOf(itemName);
+        cart.splice(index,1);
+    }
+
+    function size()
+{
+    var x= cart.length;
+    return x;
+}
+
+//lab set 6
+
+person={}
+person.name;
+person.age;
+person.mno=[];
+
+person.getName = function()
+{
+    console.log(person.name);
+}
+
+function setName(newName)
+{
+person.name=newName;
+}
+
+function getStatus()
+{
+    if(person.age>100 || person.age==0)
+    return "not valid age";
+    else
+    if(person.age>60)
+    return "old";
+    else
+    if(person.age>20)
+    return "adult";
+    else
+    if(person.age>12)
+    return "teenager";
+    else
+    return "child";  
+    
+}
+
+function addNo(num){
+    person.mno.push(num);
+}
+    
+function addMobile(mobileNumber){
+    person.mno.push(mobileNumber); 
+}
+
+//lab set 7
+
+person1 = {};
+person2={};
+person3={};
+
+var arr = [ {person1, person2, person3}]
+
+{
+    "name", "age","mobile=[]"
+}
+
+function getValue(obj,fnc) 
+{
+    var x= arr.indexOf(obj);
+    var y=fnc;
+  return arr[x].y
+  
+ 
+}
+    
+      
