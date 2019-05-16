@@ -399,20 +399,61 @@ function addMobile(mobileNumber){
 person1 = {};
 person2={};
 person3={};
+arr=[person1, person2, person3]
 
-var arr = [ {person1, person2, person3}]
+person1.name="harsh";
+person1.age=20;
+person1.mno=[8794561236];
 
+person2.name="pratistha";
+person2.age="21";
+person2.mno=[9568471528];
+
+person3.name="sourabh";
+person3.age=22;
+person3.mno=[7768471528];
+
+function getValue(obj,prop) 
 {
-    "name", "age","mobile=[]"
+    return obj[prop];
 }
-
-function getValue(obj,fnc) 
+function setValue(obj,prop,propValue)
 {
-    var x= arr.indexOf(obj);
-    var y=fnc;
-  return arr[x].y
-  
- 
-}
+   return obj[prop]=propValue;
     
-      
+}
+
+function getStatus(obj){
+    
+        if(obj.age>100 || obj.age==0)
+        return "not valid age";
+        else
+        if(obj.age>60)
+        return "old";
+        else
+        if(obj.age>20)
+        return "adult";
+        else
+        if(obj.age>12)
+        return "teenager";
+        else
+        return "child";  
+        
+    }
+
+    function addMobile(obj,num){
+        return obj.mno.push(num);
+    }
+    
+    function removeMobile(obj,num)
+    {
+        var x=obj.mno.indexOf(num);
+        return obj.mno.splice(x,1);
+
+    }
+
+    function totalMobiles(obj)
+    {
+        return obj.mno.length;
+    }
+
