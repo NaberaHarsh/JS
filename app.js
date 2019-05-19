@@ -455,5 +455,70 @@ function getStatus(obj){
     function totalMobiles(obj)
     {
         return obj.mno.length;
+        
     }
 
+// additional problems
+
+function odd_even(){
+
+for(var i=1;i<=15;i++ )
+{
+    if(i%2==0)
+    console.log( "even");
+    else
+    console.log("odd");
+}
+}
+
+function pattern(n)
+{
+for(i=1;i<=n;i++)
+{
+    for(j=1;j<=i;j++)
+    {
+        document.write("*");
+    }
+    document.write("<br>");
+}
+}
+
+function reverse(str)
+{
+    var x=str.split("");
+    for(var i=str.length;i>0;i--)
+    {
+        document.write(str[i-1]);
+    }
+}
+function rev(str)
+{
+    var x=str.split("").reverse().join("");
+    return x;
+}
+
+var fb_post=[
+{
+    "author_name":"harsh",
+    "author_image":"1.jpg",
+    "likes":7,
+    "comments":5,
+    "share":3
+},
+{
+    "author_name":"pratiksha",
+    "author_image":"2.jpg",
+    "likes":15,
+    "comments":7,
+    "share":8
+
+},
+{
+    "author_name":"sourabh",
+    "author_image":"3.jpg",
+    "likes":4,
+    "comments":1,
+    "share":1
+
+}
+]

@@ -1,0 +1,54 @@
+<html>
+<body>
+
+<h1 id="country">India</h1>
+<img src="1.png" alt="image" id="image">
+
+<h2 id="aa" >wopah!!</h2>
+<button onclick="counter()">click </button>
+
+<select  id="drop" onchange="nothing()">
+<option value="frist">first</option>
+<option value="second">second</option>
+</select>
+<h3 id="bb">first do nothing</h3>
+
+<script>
+var elem=document.getElementById("country");
+var i=0;
+setInterval(()=>{ elem.innerText = i;i++ }, 300);
+elem.style.color = "green" ;   // change color
+
+
+var logo=document.getElementById("image");
+var i=0;
+function rotate(i){
+logo.style.transform= "rotate("+i+"deg) ";
+}
+
+setInterval(
+    function(){
+       rotate(i);
+       i=i+5;
+    },300)
+
+var click=document.getElementById("aa");
+
+function counter(){
+    setInterval(()=>{click.innerText=i;i++},300)
+}
+
+var change=document.getElementById("bb")
+function nothing()
+{
+    change.innerText="this also do nothing";
+}
+
+    
+</script>
+
+
+
+</body>
+</html>
+
